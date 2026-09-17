@@ -6735,12 +6735,19 @@ section {
 
 @media (max-width: 600px) {
 
-    .cta-points {
+    /* .cta-points {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 14px 12px;
         width: 100%;
         margin-top: 24px;
+    } */
+
+    .cta-points {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+        grid-auto-flow: column;
     }
 
     .cta-point {
