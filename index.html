@@ -1492,6 +1492,225 @@
             </div>
 
         </section>
+        
+        <!-- =========================
+            GALERI CETAKITA
+        ========================== -->
+        <section class="section cetakita-gallery-section" id="galeri">
+
+            <div class="container">
+
+                <!-- HEADER -->
+                <div class="cetakita-gallery-header">
+
+                    <span class="cetakita-gallery-label">
+                        LIHAT LEBIH DEKAT
+                    </span>
+
+                    <h2>
+                        Kenalan dengan
+                        <span>CetaKita.</span>
+                    </h2>
+
+                    <p>
+                        Beberapa tampilan dan layanan yang bisa kamu
+                        temukan di CetaKita.
+                    </p>
+
+                </div>
+
+
+                <!-- GALLERY -->
+                <div class="cetakita-gallery-grid">
+
+                    <!-- FOTO 1 -->
+                    <button
+                        type="button"
+                        class="cetakita-gallery-item cetakita-gallery-large"
+                        data-gallery-image="assets/images/cetakita-gallery-1.png"
+                        data-gallery-title="Perkiraan Harga"
+                        data-gallery-description="Hitung kebutuhan print dan dapatkan perkiraan harga secara otomatis."
+                    >
+                        <img
+                            src="assets/images/cetakita-gallery-1.png"
+                            alt="Fitur perkiraan harga CetaKita"
+                            loading="lazy"
+                        >
+
+                        <div class="cetakita-gallery-overlay">
+                            <div>
+                                <strong>Perkiraan Harga</strong>
+                                <span>Hitung kebutuhan print dengan mudah</span>
+                            </div>
+
+                            <span class="cetakita-gallery-view">
+                                ↗
+                            </span>
+                        </div>
+                    </button>
+
+
+                    <!-- FOTO 2 -->
+                    <button
+                        type="button"
+                        class="cetakita-gallery-item"
+                        data-gallery-image="assets/images/cetakita-gallery-2.png"
+                        data-gallery-title="Bantuan Tugas & Dokumen"
+                        data-gallery-description="Bantuan untuk berbagai kebutuhan tugas dan dokumen."
+                    >
+                        <img
+                            src="assets/images/cetakita-gallery-2.png"
+                            alt="Bantuan tugas dan dokumen CetaKita"
+                            loading="lazy"
+                        >
+
+                        <div class="cetakita-gallery-overlay">
+                            <div>
+                                <strong>Bantuan Tugas</strong>
+                                <span>Word, Excel, PowerPoint & dokumen</span>
+                            </div>
+
+                            <span class="cetakita-gallery-view">
+                                ↗
+                            </span>
+                        </div>
+                    </button>
+
+
+                    <!-- FOTO 3 -->
+                    <button
+                        type="button"
+                        class="cetakita-gallery-item"
+                        data-gallery-image="assets/images/cetakita-gallery-3.png"
+                        data-gallery-title="CetaKita"
+                        data-gallery-description="Print, dokumen, dan berbagai kebutuhan lainnya."
+                    >
+                        <img
+                            src="assets/images/cetakita-gallery-3.png"
+                            alt="Layanan CetaKita"
+                            loading="lazy"
+                        >
+
+                        <div class="cetakita-gallery-overlay">
+                            <div>
+                                <strong>Layanan CetaKita</strong>
+                                <span>Print, dokumen & solusi</span>
+                            </div>
+
+                            <span class="cetakita-gallery-view">
+                                ↗
+                            </span>
+                        </div>
+                    </button>
+
+
+                    <!-- FOTO 4 -->
+                    <button
+                        type="button"
+                        class="cetakita-gallery-item"
+                        data-gallery-image="assets/images/cetakita-gallery-4.png"
+                        data-gallery-title="Estimator Harga"
+                        data-gallery-description="Perkiraan harga print dalam hitungan detik."
+                    >
+                        <img
+                            src="assets/images/cetakita-gallery-4.png"
+                            alt="Estimator harga CetaKita"
+                            loading="lazy"
+                        >
+
+                        <div class="cetakita-gallery-overlay">
+                            <div>
+                                <strong>Estimator Harga</strong>
+                                <span>Perkiraan harga dalam hitungan detik</span>
+                            </div>
+
+                            <span class="cetakita-gallery-view">
+                                ↗
+                            </span>
+                        </div>
+                    </button>
+
+                    <!-- FOTO 5 -->
+                    <button
+                        type="button"
+                        class="cetakita-gallery-item"
+                        data-gallery-image="assets/images/cetakita-gallery-5.png"
+                        data-gallery-title="Hasil Cetakan Berkualitas"
+                        data-gallery-description="Hasil print yang rapi, jelas, dan siap digunakan untuk berbagai kebutuhan."
+                    >
+                        <img
+                            src="assets/images/cetakita-gallery-5.png"
+                            alt="Hasil cetakan berkualitas CetaKita"
+                            loading="lazy"
+                        >
+
+                        <div class="cetakita-gallery-overlay">
+                            <div>
+                                <strong>Hasil Cetakan</strong>
+                                <span>Rapi, jelas & berkualitas</span>
+                            </div>
+
+                            <span class="cetakita-gallery-view">
+                                ↗
+                            </span>
+                        </div>
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+            LIGHTBOX GALERI
+        ========================== -->
+        <div
+            class="cetakita-lightbox"
+            id="cetakitaLightbox"
+            aria-hidden="true"
+        >
+
+            <div class="cetakita-lightbox-backdrop"></div>
+
+            <div
+                class="cetakita-lightbox-content"
+                role="dialog"
+                aria-modal="true"
+                aria-label="Preview gambar"
+            >
+
+                <button
+                    type="button"
+                    class="cetakita-lightbox-close"
+                    id="cetakitaLightboxClose"
+                    aria-label="Tutup"
+                >
+                    ×
+                </button>
+
+                <img
+                    id="cetakitaLightboxImage"
+                    src=""
+                    alt=""
+                >
+
+                <div class="cetakita-lightbox-info">
+
+                    <strong id="cetakitaLightboxTitle">
+                        CetaKita
+                    </strong>
+
+                    <span id="cetakitaLightboxDescription">
+                        Preview
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
 
 
         <!-- =========================

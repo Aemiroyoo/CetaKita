@@ -1578,3 +1578,160 @@ if (quantityInput) {
    ========================================================= */
 
 updateEstimator();
+
+
+/* =========================================================
+   GALERI CETAKITA — LIGHTBOX
+   ========================================================= */
+
+const cetakitaGalleryItems = document.querySelectorAll(
+    ".cetakita-gallery-item"
+);
+
+const cetakitaLightbox = document.getElementById(
+    "cetakitaLightbox"
+);
+
+const cetakitaLightboxImage = document.getElementById(
+    "cetakitaLightboxImage"
+);
+
+const cetakitaLightboxTitle = document.getElementById(
+    "cetakitaLightboxTitle"
+);
+
+const cetakitaLightboxDescription = document.getElementById(
+    "cetakitaLightboxDescription"
+);
+
+const cetakitaLightboxClose = document.getElementById(
+    "cetakitaLightboxClose"
+);
+
+const cetakitaLightboxBackdrop = document.querySelector(
+    ".cetakita-lightbox-backdrop"
+);
+
+
+/* =========================
+   BUKA LIGHTBOX
+========================== */
+
+function openCetakitaLightbox(item) {
+
+    if (!cetakitaLightbox) return;
+
+    const image = item.dataset.galleryImage;
+    const title = item.dataset.galleryTitle || "CetaKita";
+    const description =
+        item.dataset.galleryDescription || "";
+
+    if (cetakitaLightboxImage) {
+        cetakitaLightboxImage.src = image;
+        cetakitaLightboxImage.alt = title;
+    }
+
+    if (cetakitaLightboxTitle) {
+        cetakitaLightboxTitle.textContent = title;
+    }
+
+    if (cetakitaLightboxDescription) {
+        cetakitaLightboxDescription.textContent = description;
+    }
+
+    cetakitaLightbox.classList.add("active");
+
+    cetakitaLightbox.setAttribute(
+        "aria-hidden",
+        "false"
+    );
+
+    document.body.style.overflow = "hidden";
+}
+
+
+/* =========================
+   TUTUP LIGHTBOX
+========================== */
+
+function closeCetakitaLightbox() {
+
+    if (!cetakitaLightbox) return;
+
+    cetakitaLightbox.classList.remove("active");
+
+    cetakitaLightbox.setAttribute(
+        "aria-hidden",
+        "true"
+    );
+
+    document.body.style.overflow = "";
+
+    setTimeout(() => {
+
+        if (cetakitaLightboxImage) {
+            cetakitaLightboxImage.src = "";
+        }
+
+    }, 300);
+}
+
+
+/* =========================
+   CLICK FOTO
+========================== */
+
+cetakitaGalleryItems.forEach(item => {
+
+    item.addEventListener("click", () => {
+        openCetakitaLightbox(item);
+    });
+
+});
+
+
+/* =========================
+   CLOSE BUTTON
+========================== */
+
+if (cetakitaLightboxClose) {
+
+    cetakitaLightboxClose.addEventListener(
+        "click",
+        closeCetakitaLightbox
+    );
+
+}
+
+
+/* =========================
+   CLICK BACKDROP
+========================== */
+
+if (cetakitaLightboxBackdrop) {
+
+    cetakitaLightboxBackdrop.addEventListener(
+        "click",
+        closeCetakitaLightbox
+    );
+
+}
+
+
+/* =========================
+   ESCAPE
+========================== */
+
+document.addEventListener("keydown", event => {
+
+    if (
+        event.key === "Escape" &&
+        cetakitaLightbox &&
+        cetakitaLightbox.classList.contains("active")
+    ) {
+
+        closeCetakitaLightbox();
+
+    }
+
+});
